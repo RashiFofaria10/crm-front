@@ -12,12 +12,12 @@ import DashboardSourceChart from "../components/dashboard/DashboardSourceChart";
 
 export default function Dashboard() {
   return (
-    <div className="p-6 bg-slate-50 min-h-screen">
+    <div className="p-4 bg-slate-50 min-h-screen">
 
       {/* Header */}
 
       <div className="mb-6">
-        <h1 className="text-2xl font-semibold text-slate-800">
+        <h1 className="text-3xl font-bold text-slate-900">
           Welcome back, Riya
         </h1>
 
@@ -30,9 +30,9 @@ export default function Dashboard() {
 
 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-6 gap-4 mb-6">
 
-  <div className="bg-white rounded-2xl p-4 shadow-sm">
+  <div className="bg-white rounded-2xl p-3 shadow-sm">
     <div className="flex justify-between items-start mb-5">
-      <UserPlus size={18} className="text-sky-500" />
+      <UserPlus size={14} className="text-sky-500" />
       <span className="text-xs text-slate-500">+12%</span>
     </div>
 
@@ -49,7 +49,7 @@ export default function Dashboard() {
       <span className="text-xs text-slate-500">+4%</span>
     </div>
 
-    <h3 className="text-4xl font-semibold">86</h3>
+    <h3 className="text-2xl font-bold">86</h3>
 
     <p className="text-sm text-slate-500 mt-2">
       Active Clients
@@ -62,9 +62,9 @@ export default function Dashboard() {
       <span className="text-xs text-slate-500">-3</span>
     </div>
 
-    <h3 className="text-4xl font-semibold">17</h3>
+    <h3 className="text-2xl font-bold">17</h3>
 
-    <p className="text-sm text-slate-500 mt-2">
+    <p className="text-xs text-slate-500 mt-2">
       Pending Tasks
     </p>
   </div>
@@ -75,9 +75,9 @@ export default function Dashboard() {
       <span className="text-xs text-slate-500">+22</span>
     </div>
 
-    <h3 className="text-4xl font-semibold">124</h3>
+    <h3 className="text-2xl font-bold">124</h3>
 
-    <p className="text-sm text-slate-500 mt-2">
+    <p className="text-xs text-slate-500 mt-2">
       Completed Tasks
     </p>
   </div>
@@ -88,9 +88,9 @@ export default function Dashboard() {
       <span className="text-xs text-slate-500">+2</span>
     </div>
 
-    <h3 className="text-4xl font-semibold">9</h3>
+    <h3 className="text-2xl font-bold">9</h3>
 
-    <p className="text-sm text-slate-500 mt-2">
+    <p className="text-xs text-slate-500 mt-2">
       SIP Pending
     </p>
   </div>
@@ -101,9 +101,9 @@ export default function Dashboard() {
       <span className="text-xs text-slate-500">-1</span>
     </div>
 
-    <h3 className="text-4xl font-semibold">6</h3>
+    <h3 className="text-2xl font-bold">6</h3>
 
-    <p className="text-sm text-slate-500 mt-2">
+    <p className="text-xs text-slate-500 mt-2">
       Account Openings Pending
     </p>
   </div>
@@ -144,7 +144,7 @@ export default function Dashboard() {
       </p>
     </div>
 
-    <div className="h-[300px]">
+    <div className="h-[220px]">
       <DashboardSourceChart />
     </div>
 
@@ -239,9 +239,9 @@ export default function Dashboard() {
 
         </div>
 
-        <div className="bg-white rounded-2xl shadow-sm">
+        <div className="bg-white rounded-xl shadow-sm">
 
-          <div className="p-5 border-b">
+          <div className="p-3 border-b">
             <h2 className="font-semibold">
               Recent Activity
             </h2>
@@ -249,7 +249,7 @@ export default function Dashboard() {
 
           <div className="divide-y">
 
-            <div className="p-4">
+            <div className="p-3">
               <p className="text-sm font-medium">
                 New lead from website
               </p>
@@ -259,7 +259,7 @@ export default function Dashboard() {
               </p>
             </div>
 
-            <div className="p-4">
+            <div className="p-3">
               <p className="text-sm font-medium">
                 Task completed
               </p>
@@ -269,7 +269,7 @@ export default function Dashboard() {
               </p>
             </div>
 
-            <div className="p-4">
+            <div className="p-3">
               <p className="text-sm font-medium">
                 KYC uploaded
               </p>
@@ -279,7 +279,7 @@ export default function Dashboard() {
               </p>
             </div>
 
-            <div className="p-4">
+            <div className="p-3">
               <p className="text-sm font-medium">
                 Account opened
               </p>
@@ -297,9 +297,9 @@ export default function Dashboard() {
 
       {/* Website Inquiries */}
 
-      <div className="bg-white rounded-2xl shadow-sm">
+      <div className="bg-white rounded-xl shadow-sm">
 
-        <div className="p-5 border-b flex justify-between">
+        <div className="p-3 border-b flex justify-between">
 
           <h2 className="font-semibold">
             New Website Inquiries
@@ -356,7 +356,7 @@ export default function Dashboard() {
               </p>
             </div>
 
-            <button className="text-blue-600 text-sm">
+            <button className="text-blue-600 text-xs">
               Open
             </button>
           </div>
