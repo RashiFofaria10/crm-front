@@ -1,5 +1,17 @@
 import React from "react";
 import {
+  ResponsiveContainer,
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  Tooltip,
+  CartesianGrid,
+  PieChart,
+  Pie,
+  Cell,
+} from "recharts";
+import {
   Users,
   Shield,
   Car,
@@ -9,6 +21,35 @@ import {
   Calendar,
   Clock,
 } from "lucide-react";
+const revenueData = [
+  { month: "Jan", revenue: 1200000 },
+  { month: "Feb", revenue: 1450000 },
+  { month: "Mar", revenue: 1650000 },
+  { month: "Apr", revenue: 1820000 },
+  { month: "May", revenue: 2100000 },
+  { month: "Jun", revenue: 2804450 },
+];
+
+const serviceData = [
+  {
+    name: "Insurance",
+    value: 40,
+  },
+  {
+    name: "Vehicle",
+    value: 30,
+  },
+  {
+    name: "Mutual Funds",
+    value: 30,
+  },
+];
+
+const COLORS = [
+  "#2563eb",
+  "#14b8a6",
+  "#f59e0b",
+];
 
 export default function Dashboard() {
   return (
@@ -51,10 +92,26 @@ export default function Dashboard() {
             Revenue Trend (6 mo)
           </h2>
 
-          <div className="h-[280px] border rounded-lg flex items-center justify-center text-slate-400">
-            Revenue Chart
-          </div>
+          <div className="h-[280px]">
+  <ResponsiveContainer width="100%" height="100%">
+    <LineChart data={revenueData}>
+      <CartesianGrid strokeDasharray="3 3" />
 
+      <XAxis dataKey="month" />
+
+      <YAxis />
+
+      <Tooltip />
+
+      <Line
+        type="monotone"
+        dataKey="revenue"
+        stroke="#2563eb"
+        strokeWidth={3}
+      />
+    </LineChart>
+  </ResponsiveContainer>
+</div>
         </div>
 
         <div className="bg-white rounded-xl shadow-sm p-4">
@@ -63,10 +120,44 @@ export default function Dashboard() {
             Service Distribution
           </h2>
 
-          <div className="h-[280px] border rounded-lg flex items-center justify-center text-slate-400">
-            Pie Chart
-          </div>
+         <div className="h-[280px]">
+  <ResponsiveContainer width="100%" height="100%">
+    <PieChart>
+      <Pie
+        data={serviceData}
+        dataKey="value"
+        nameKey="name"
+        cx="50%"
+        cy="50%"
+        innerRadius={60}
+        outerRadius={90}
+      >
+        {serviceData.map((entry, index) => (
+          <Cell
+            key={index}
+            fill={COLORS[index]}
+          />
+        ))}
+      </Pie>
 
+      <Tooltip />
+    </PieChart>
+  </ResponsiveContainer>
+
+  <div className="flex justify-center gap-4 mt-2 text-sm">
+    <span className="text-blue-600">
+      ● Insurance
+    </span>
+
+    <span className="text-teal-600">
+      ● Vehicle
+    </span>
+
+    <span className="text-amber-500">
+      ● Mutual Funds
+    </span>
+  </div>
+</div>
         </div>
 
       </div>
