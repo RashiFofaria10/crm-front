@@ -1,4 +1,4 @@
-```tsx
+import React from "react";
 import {
   Users,
   Shield,
@@ -249,4 +249,3 @@ function Inquiry({
     </div>
   );
 }
-```
