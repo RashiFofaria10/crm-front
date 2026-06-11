@@ -233,7 +233,7 @@ export default function Dashboard() {
 
       <div className="bg-white rounded-xl shadow-sm">
 
-        <div className="p-3 border-b flex justify-between">
+        <div className="p-3 flex justify-between">
           <h2 className="font-semibold text-sm">
             New Website Inquiries
           </h2>
