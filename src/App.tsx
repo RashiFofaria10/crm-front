@@ -15,9 +15,6 @@ import VehicleInsurance from "./pages/VehicleInsurance";
 import InsuranceClients from "./pages/InsuranceClients";
 import MutualFundClients from "./pages/MutualFundClients";
 
-import ClientDetails from "./pages/ClientDetails";
-import ConvertLead from "./pages/ConvertLead";
-
 import Tasks from "./pages/Tasks";
 import Analytics from "./pages/Analytics";
 import Notifications from "./pages/Notifications";
@@ -34,16 +31,18 @@ function App() {
 
           <main className="pt-16 min-h-screen">
             <Routes>
-
+              {/* Dashboard */}
               <Route path="/" element={<Dashboard />} />
 
+              {/* Leads */}
               <Route path="/leads" element={<Leads />} />
               <Route path="/add-lead" element={<AddLead />} />
-              <Route path="/convert-lead/:id" element={<ConvertLead />} />
 
+              {/* Clients */}
               <Route path="/all-clients" element={<AllClients />} />
               <Route path="/add-client" element={<AddClient />} />
 
+              {/* Insurance */}
               <Route
                 path="/vehicle-insurance"
                 element={<VehicleInsurance />}
@@ -59,16 +58,11 @@ function App() {
                 element={<MutualFundClients />}
               />
 
-              <Route
-                path="/client/:id"
-                element={<ClientDetails />}
-              />
-
+              {/* Other Pages */}
               <Route path="/tasks" element={<Tasks />} />
               <Route path="/analytics" element={<Analytics />} />
               <Route path="/notifications" element={<Notifications />} />
               <Route path="/settings" element={<Settings />} />
-
             </Routes>
           </main>
         </div>
