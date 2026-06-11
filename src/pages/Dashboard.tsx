@@ -132,7 +132,7 @@ export default function Dashboard() {
         innerRadius={60}
         outerRadius={90}
       >
-        {serviceData.map((entry, index) => (
+        {serviceData.map((_, index) => (
           <Cell
             key={index}
             fill={COLORS[index]}
