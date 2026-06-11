@@ -29,7 +29,7 @@ function App() {
         <div className="ml-72">
           <Header />
 
-          <main className="pt-16 min-h-screen">
+          <main className="pt-[72px] min-h-screen">
             <Routes>
               {/* Dashboard */}
               <Route path="/" element={<Dashboard />} />
