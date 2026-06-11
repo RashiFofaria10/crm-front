@@ -1,4 +1,3 @@
-import { vehiclePolicies } from "../data/vehiclePolicies";
 import { Search, Download, Plus } from "lucide-react";
 
 export default function VehicleInsurance() {
