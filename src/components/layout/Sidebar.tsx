@@ -40,7 +40,7 @@ export default function Sidebar() {
     >
       {/* Logo */}
 
-      <div className="h-[68px] px-6 flex items-center">
+      <div className="h-[72px] px-6 flex items-center border-b border-slate-200">
         <div className="flex items-center gap-3">
           <div className="w-11 h-11 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-lg">
             F
