@@ -33,11 +33,6 @@ export default function Leads() {
         </p>
       </div>
 
-      <div className="flex justify-end gap-3 mb-5">
-        <button className="flex items-center gap-2 px-4 py-2 bg-white border rounded-xl text-sm">
-          <Download size={16} />
-          Export
-        </button>
 
         <button className="flex items-center gap-2 px-4 py-2 bg-slate-900 text-white rounded-xl text-sm">
           <UserPlus size={16} />
